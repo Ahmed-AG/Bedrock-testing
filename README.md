@@ -2,6 +2,8 @@
 
 # Testing AWS Bedrock service
 ## Basic test
+Testing basic functionality of AWS Bedrock in Bash
+Using [basic-test.sh](basic-test.sh): `bash basic-test.sh {AWS Profile} {Prompt}`
 ### Bash basic tests
 ```bash
 % bash basic-test.sh botdev "tell me a story"
@@ -21,6 +23,9 @@
 }
 ```
 ### Python basic test
+Testing basic functionality of AWS Bedrock in Python
+Using [basic-test.py](basic-test.py): `python3 basic-test.py {AWS Profile} {Prompt}`
+
 ```bash
 % python3 basic-test.py botdev "tell me a story" 
 {
