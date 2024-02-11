@@ -9,7 +9,7 @@ bedrock = session.client('bedrock-runtime')
 
 # {"prompt": "\n\nHuman: "'"$QUERY"'"\n\nAssistant:"}
 
-prompt = "\n\nHuman: tell me a story \n\nAssistant:"
+prompt = "tell me a story"
 
 body = {
         "prompt": prompt,
@@ -18,6 +18,9 @@ body = {
     }
 
 response = bedrock.invoke_model(
-    modelId="cohere.command-text-v14", body=json.dumps(body)
+    modelId="cohere.command-light-text-v14",
+    body=json.dumps(body)
 )
-print(response)
+response_body = json.loads(response.get('body').read())
+print(json.dumps(response_body, indent=4))
+
