@@ -3,7 +3,7 @@
 # Testing AWS Bedrock service
 ## Basic test
 Testing basic functionality of AWS Bedrock in Bash
-Using [basic-test.sh](basic-test.sh): `bash basic-test.sh {AWS Profile} {Prompt}`
+Using [basic-test.sh](basic-test.sh): `bash basic-test.sh {AWS Profile} {Prompt}`.
 ### Bash basic tests
 ```bash
 % bash basic-test.sh botdev "tell me a story"
@@ -24,7 +24,7 @@ Using [basic-test.sh](basic-test.sh): `bash basic-test.sh {AWS Profile} {Prompt}
 ```
 ### Python basic test
 Testing basic functionality of AWS Bedrock in Python
-Using [basic-test.py](basic-test.py): `python3 basic-test.py {AWS Profile} {Prompt}`
+Using [basic-test.py](basic-test.py): `python3 basic-test.py {AWS Profile} {Prompt}`.
 
 ```bash
 % python3 basic-test.py botdev "tell me a story" 
@@ -41,6 +41,9 @@ Using [basic-test.py](basic-test.py): `python3 basic-test.py {AWS Profile} {Prom
 }
 ```
 ## Cloudwatch query test
+
+Testing Cloudwatch query generation using AWS Bedrock in Python
+Using [cloudwatch-titan-test.py](cloudwatch-titan-test.py): `python3 cloudwatch-titan-test.py {AWS Profile} {Request}`.
 
 To get the model to accurately create a Cloudwatch query, an [instructions file](cloudwatch_instructions.txt) is being provided.
 
