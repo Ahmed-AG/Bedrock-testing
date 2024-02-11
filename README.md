@@ -37,8 +37,10 @@
 ```
 ## Cloudwatch query test
 
+To get the model to accurately create a Cloudwatch query, an (instructions file)[cloudwatch_instructions] is being provided.
+
 ```bash
-% python3 cloudwatch-titan-test.py "Show me traffic going to 8.8.8.8"
+% python3 cloudwatch-titan-test.py botdev "Show me traffic going to 8.8.8.8"
 {
     "inputTextTokenCount": 2499,
     "results": [

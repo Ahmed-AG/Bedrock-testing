@@ -10,8 +10,6 @@ import boto3
 import json
 import sys
 
-PROFILE=sys.argv[1]
-
 def read_file(file_path):
     file = open(file_path, "r")
     return file.readlines()
@@ -40,6 +38,8 @@ def invoke_model(request):
     response_body = json.loads(response.get('body').read())
     return response_body
 
+PROFILE = sys.argv[1]
 request = sys.argv[2] 
-output = invoke_model(request)
+
+output  = invoke_model(request)
 print(json.dumps(output,indent=4))
