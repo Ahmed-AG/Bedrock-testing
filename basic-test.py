@@ -1,13 +1,10 @@
 import boto3 
 import json
 
-session = boto3.Session(profile_name='botdev')
+PROFILE="botdev"
+
+session = boto3.Session(profile_name=PROFILE)
 bedrock = session.client('bedrock-runtime')
-
-# models=bedrock.list_foundation_models()
-# print(json.dumps(models, indent=2))
-
-# {"prompt": "\n\nHuman: "'"$QUERY"'"\n\nAssistant:"}
 
 prompt = "tell me a story"
 
