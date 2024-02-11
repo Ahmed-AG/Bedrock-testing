@@ -1,5 +1,5 @@
 ## Bedrock testing:
-aws bedrock list-foundation-models  --profile aag-aws 
+aws bedrock list-foundation-models  --profile botdev |jq -r '.modelSummaries | .[].modelId'
 
 aws --profile botdev bedrock-runtime invoke-model \
     --model-id amazon.titan-tg1-large \
