@@ -1,12 +1,12 @@
 # Testing AWS Bedrock service
-## Listing models:
+## Listing models
 ```bash
 aws bedrock list-foundation-models  --profile <AWS PROFILE> |jq -r '.modelSummaries | .[].modelId'
 ```
 ## Basic test
 Testing basic functionality of AWS Bedrock in Bash
 Using [basic-test.sh](basic-test.sh): `bash basic-test.sh <AWS Profile> <Prompt>`.
-### Bash basic tests
+### Bash basic test
 ```bash
 % bash basic-test.sh botdev "tell me a story"
 {
