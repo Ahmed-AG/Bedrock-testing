@@ -1,15 +1,15 @@
 import boto3 
 import json
+import sys
 
-PROFILE="botdev"
+PROFILE = sys.argv[1]
+PROMPT = sys.argv[2]
 
 session = boto3.Session(profile_name=PROFILE)
 bedrock = session.client('bedrock-runtime')
 
-prompt = "tell me a story"
-
 body = {
-        "prompt": prompt,
+        "prompt": PROMPT,
         # "temperature": 0.5,
         # "maxTokens": 200,
     }

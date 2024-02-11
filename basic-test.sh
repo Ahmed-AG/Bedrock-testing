@@ -1,8 +1,7 @@
 #!/bin/bash
 
-PROFILE=botdev
-
-PROMPT="tell me a story"
+PROFILE=$1
+PROMPT=$2
 
 aws --profile $PROFILE bedrock-runtime invoke-model \
     --model-id cohere.command-light-text-v14 \
